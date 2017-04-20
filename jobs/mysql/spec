@@ -14,6 +14,7 @@ templates:
   gra-log-purger.sh.erb: bin/gra-log-purger.sh
   syslog_forwarder.conf.erb: config/syslog_forwarder.conf
   pre-start-setup.erb: bin/pre-start
+  post-start.erb: bin/post-start
   pre-start-execution.erb: bin/pre-start-execution
   cluster_health_logger_ctl.erb: bin/cluster_health_logger_ctl
   cluster_health_logger_config.yml.erb: config/cluster_health_logger_config.yml
@@ -44,6 +45,11 @@ provides:
   type: mysql
 
 properties:
+  pmm.server_address:
+    description: "PMM server_address"
+  pmm.admin_password:
+    description: "PMM admin password"
+
   syslog_aggregator.address:
     description: "IP address for syslog aggregator"
   syslog_aggregator.port:

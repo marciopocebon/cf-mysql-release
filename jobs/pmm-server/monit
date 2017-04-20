@@ -1,0 +1,5 @@
+check process pmm-server
+  with pidfile /var/vcap/sys/run/pmm-server/pmm-server.pid
+  start program "/var/vcap/jobs/pmm-server/bin/pmm-server_ctl start" 
+  stop program "/var/vcap/jobs/pmm-server/bin/pmm-server_ctl stop" 
+  group vcap

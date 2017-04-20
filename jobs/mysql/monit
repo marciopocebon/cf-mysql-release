@@ -1,6 +1,6 @@
 check process mariadb_ctrl
   with pidfile /var/vcap/sys/run/mariadb_ctl/mariadb_ctl.pid
-  start program "/var/vcap/jobs/mysql/bin/mariadb_ctl start"
+  start program "/var/vcap/jobs/mysql/bin/mariadb_ctl start" with timeout 120 seconds
   stop program "/var/vcap/jobs/mysql/bin/mariadb_ctl stop" with timeout 30 seconds
   group vcap
   depends on gra-log-purger-executable

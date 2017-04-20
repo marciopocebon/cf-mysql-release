@@ -1,0 +1,13 @@
+---
+name: pmm-server
+
+templates:
+  pmm-server_ctl.erb: bin/pmm-server_ctl
+  pre-start: bin/pre-start
+
+packages: 
+- cf-mysql-common
+
+properties: 
+  pmm.admin_password:
+    description: "PMM admin password"
