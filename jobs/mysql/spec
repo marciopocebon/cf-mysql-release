@@ -14,7 +14,7 @@ templates:
   gra-log-purger.sh.erb: bin/gra-log-purger.sh
   syslog_forwarder.conf.erb: config/syslog_forwarder.conf
   pre-start-setup.erb: bin/pre-start
-  post-start.erb: bin/post-start
+  join-monitoring.erb: bin/join-monitoring
   pre-start-execution.erb: bin/pre-start-execution
   cluster_health_logger_ctl.erb: bin/cluster_health_logger_ctl
   cluster_health_logger_config.yml.erb: config/cluster_health_logger_config.yml

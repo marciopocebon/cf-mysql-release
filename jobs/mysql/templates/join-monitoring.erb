@@ -1,8 +1,6 @@
-#!/bin/bash
-
-set -e
-set -o pipefail
+#!/bin/bash -e
 
 pmm-admin config --server <%= p("pmm.server_address")%> --server-password <%= p("pmm.admin_password")%> --client-name '<%= spec.deployment %>-<%= name %>-<%= index %>' --force
+pmm-admin repair #delete orphained services in case we have such
 pmm-admin add mysql --user <%= p("cf_mysql.mysql.admin_username")%> --password <%= p("cf_mysql.mysql.admin_password")%> --host 127.0.0.1
 
